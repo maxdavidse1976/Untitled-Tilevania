@@ -7,13 +7,15 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float _runSpeed = 5f;
     [SerializeField] float _jumpForce = 8f;
+    [SerializeField] float _climbSpeed = 3f;
+
     Vector2 _moveInput;
     Rigidbody2D _rigidbody;
     Animator _playerAnimator;
     CapsuleCollider2D _collider;
 
     bool _playerHasHorizontalMoveSpeed = false;
-    
+    bool _playerHasVerticalMoveSpeed = false;
 
     void Awake()
     {
@@ -26,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Run();
         FlipSprite();
+        ClimbLadder();
     }
 
     void OnMove(InputValue value)
@@ -43,6 +46,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void ClimbLadder()
+    {
+        if (!_collider.IsTouchingLayers(LayerMask.GetMask("Climable"))) return;
+
+        Vector2 climbVelocity = new Vector2(_rigidbody.velocity.x, _moveInput.y * _climbSpeed);
+        _playerHasVerticalMoveSpeed = Mathf.Abs(climbVelocity.y) > Mathf.Epsilon;
+        _rigidbody.velocity = climbVelocity;
+
+        _playerAnimator.SetBool("isClimbing", _playerHasVerticalMoveSpeed);
+    }
+    
     void Run()
     {
         Vector2 playerVelocity = new Vector2(_moveInput.x * _runSpeed, _rigidbody.velocity.y);
