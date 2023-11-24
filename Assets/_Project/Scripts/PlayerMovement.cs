@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     float _startingGravity;
 
     bool _playerHasHorizontalMoveSpeed = false;
-    bool _playerHasVerticalMoveSpeed = false;
+    bool _playerIsClimbing = false;
 
     void Awake()
     {
@@ -58,10 +58,10 @@ public class PlayerMovement : MonoBehaviour
 
         _rigidbody.gravityScale = 0;
         Vector2 climbVelocity = new Vector2(_rigidbody.velocity.x, _moveInput.y * _climbSpeed);
-        _playerHasVerticalMoveSpeed = Mathf.Abs(climbVelocity.y) > Mathf.Epsilon;
+        _playerIsClimbing = Mathf.Abs(climbVelocity.y) > Mathf.Epsilon;
         _rigidbody.velocity = climbVelocity;
 
-        _playerAnimator.SetBool("isClimbing", _playerHasVerticalMoveSpeed);
+        _playerAnimator.SetBool("isClimbing", _playerIsClimbing);
     }
     
     void Run()
