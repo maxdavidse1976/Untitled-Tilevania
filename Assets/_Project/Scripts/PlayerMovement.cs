@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     Animator _playerAnimator;
     CapsuleCollider2D _bodyCollider;
     BoxCollider2D _feetCollider;
+    SpriteRenderer _spriteRenderer;
     float _startingGravity;
 
     bool _playerHasHorizontalMoveSpeed = false;
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         _bodyCollider = GetComponent<CapsuleCollider2D>();
         _feetCollider = GetComponent<BoxCollider2D>();
         _startingGravity = _rigidbody.gravityScale;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -80,7 +82,9 @@ public class PlayerMovement : MonoBehaviour
         _playerHasHorizontalMoveSpeed = Mathf.Abs(_rigidbody.velocity.x) > Mathf.Epsilon;
         if (_playerHasHorizontalMoveSpeed)
         {
-            transform.localScale = new Vector2(Mathf.Sign(_rigidbody.velocity.x), 1f);
+            var direction = new Vector2(-(Mathf.Sign(_rigidbody.velocity.x)), 1f);
+            _spriteRenderer.flipX = (direction.x > 0) ? true : false;
+            //transform.localScale = new Vector2(Mathf.Sign(_rigidbody.velocity.x), 1f);
         }
         
     }
