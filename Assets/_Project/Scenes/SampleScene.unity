@@ -13360,10 +13360,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 922233401299753517, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 3736453242047968048, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.58
@@ -13404,87 +13400,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5382208508993571196, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 8b68ba2a086e2fb439fb77d472575675, type: 2}
-    - target: {fileID: 5382208508993571196, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382208508993571196, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
-      propertyPath: m_GravityScale
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382208508993571196, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
-      propertyPath: m_SleepingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382208508993571196, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 922233401299753517, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7522053039671874579}
-    - targetCorrespondingSourceObject: {fileID: 922233401299753517, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7522053039671874580}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
---- !u!1 &7522053039671874578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 922233401299753517, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
-  m_PrefabInstance: {fileID: 7522053039671874577}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7522053039671874579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7522053039671874578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2e8f75cefb323fa4bbef29f6dfe2954b, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &7522053039671874580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7522053039671874578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8e361e2f0e15c4192d6cea9471a2ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _runSpeed: 5
-  _jumpForce: 20
-  _climbSpeed: 3
 --- !u!95 &7522053039671874583 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 850296896881202154, guid: 0318e2ce9022d2b4aadb4353dc3c60a2, type: 3}
